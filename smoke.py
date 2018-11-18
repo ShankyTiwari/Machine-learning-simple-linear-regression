@@ -18,17 +18,13 @@ class Model:
         self.X = dataset.iloc[:, :-1].values
         self.Y = dataset.iloc[:, 1].values
 
-    # Splitting the dataset into the Training set and Test set
-    def createTestSets(self):
-        self.X_train, self.X_test, self.Y_train, self.Y_test = train_test_split(self.X, self.Y)
-
     def predictAge(self):
         self.importData()
-        self.createTestSets()
         
-        # Fitting Simple Linear Regression to the Training set
+        # Fitting the Simple Linear Regression to the Training set
         regressor = LinearRegression()
-        regressor.fit(self.X_train, self.Y_train)
+      
+        regressor.fit(self.X, self.Y)
         
         smokePerDay = float(raw_input("How many cigarettes do you smoke in a day? "))
 
