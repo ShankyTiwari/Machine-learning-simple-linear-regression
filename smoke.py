@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Nov 18 20:13:59 2018, linear regression algorithm machine learning
+@author: SHASHANK
+"""
 import pandas as pd
 
 from sklearn.cross_validation import train_test_split
@@ -7,10 +12,6 @@ from sklearn.linear_model import LinearRegression
 class Model:
     X = None
     Y = None
-    X_train = None
-    Y_train = None
-    X_test = None
-    Y_test = None
     
     # Importing the dataset
     def importData(self):
